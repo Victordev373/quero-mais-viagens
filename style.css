@@ -1,0 +1,272 @@
+/* Reset e configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0f4c81;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background-color: #0f4c81;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cabeçalho com logo e informações */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  /* TESTE ESTES VALORES ATÉ FICAR BOM: */
+  width: 150px; /* Tente: 60px, 65px, 70px, 75px */
+  height: 150px; /* Sempre o mesmo valor do width */
+  object-fit: contain;
+  display: block;
+  border-radius: 90px; /* Remove espaço abaixo da imagem */
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo i {
+  font-size: 40px;
+  color: #0f4c81;
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.slogan {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 320px;
+}
+
+/* Botões principais - AGORA SÃO LINKS */
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.button-card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 16px 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ff8c00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none; /* Remove sublinhado dos links */
+  display: block; /* Faz o link ocupar toda a área */
+}
+
+.button-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  background-color: #f8f8f8;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.emoji {
+  font-size: 18px;
+}
+
+.button-subtext {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Botão Linktree - AGORA É UM LINK */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.linktree-button {
+  background-color: white;
+  border-radius: 50px;
+  padding: 18px 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none; /* Remove sublinhado */
+  display: block; /* Faz o link ocupar toda a área */
+}
+
+.linktree-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  background-color: #f8f8f8;
+}
+
+.linktree-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Links do rodapé */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.linktree-domain {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .button-card {
+    padding: 14px 16px;
+  }
+
+  .linktree-button {
+    padding: 16px 20px;
+  }
+
+  .company-name {
+    font-size: 22px;
+  }
+
+  .slogan {
+    font-size: 15px;
+  }
+
+  .button-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .logo i {
+    font-size: 34px;
+  }
+
+  .company-name {
+    font-size: 20px;
+  }
+
+  .slogan {
+    font-size: 14px;
+  }
+
+  .button-text {
+    font-size: 16px;
+  }
+
+  .linktree-text {
+    font-size: 15px;
+  }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 500px;
+  }
+}
