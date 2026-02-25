@@ -7,7 +7,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #0f4c81;
+  background-color: #FF9D14;
   color: white;
   min-height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@ body {
 .container {
   width: 100%;
   max-width: 420px;
-  background-color: #0f4c81;
+  background-color: #FF9D14;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,12 +42,12 @@ body {
 }
 
 .logo img {
-  /* TESTE ESTES VALORES ATÉ FICAR BOM: */
-  width: 150px; /* Tente: 60px, 65px, 70px, 75px */
-  height: 150px; /* Sempre o mesmo valor do width */
-  object-fit: contain;
+  width: 150px;  /* Tamanho do container */
+  height: 150px;
+  object-fit: cover;  /* Dá zoom para preencher */
+  object-position: center; /* Centraliza o zoom */
   display: block;
-  border-radius: 90px; /* Remove espaço abaixo da imagem */
+  border-radius: 90px;
 }
 
 .logo {
@@ -98,8 +98,8 @@ body {
   width: 100%;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid #ff8c00;
-  box-shadow: 0px 9px 3px #ff8c00;
+  border: 2px solid #39B59F;
+  box-shadow: 5px 10px 0px 0px #39B59F;
   position: relative;
   overflow: hidden;
   text-decoration: none; /* Remove sublinhado dos links */
@@ -270,5 +270,10 @@ body {
     max-width: 500px;
   }
 }
+
+
+
+}
+
 
 
