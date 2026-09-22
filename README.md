@@ -34,13 +34,28 @@ cd quero-mais-viagens
 npx serve .
 ```
 
+## 🔎 Pré-renderização (SEO)
+
+O `index.html` já sai com o HTML da página dentro de `<div id="root">`, para que buscadores e visitantes sem JavaScript vejam o conteúdo. Quando o `main.js` carrega, o React monta por cima.
+
+Sempre que alterar o `main.js`, gere o HTML de novo:
+
+```bash
+npm install
+npm run prerender
+```
+
 ## 📂 Estrutura do projeto
 
 ```
 quero-mais-viagens/
 ├── brand/
+├── fonts/          # Fraunces e Manrope em WOFF2 (hospedadas localmente)
 ├── images/
+├── tools/          # script de pré-renderização
 ├── index.html
+├── robots.txt
+├── sitemap.xml
 ├── main.css
 └── main.js
 ```
